@@ -1,0 +1,27 @@
+USE [EHL_Demo]
+GO
+/****** Object:  Table [dbo].[Employees]    Script Date: 7/17/2021 7:40:06 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Employees](
+	[Id] [nvarchar](50) NOT NULL,
+	[FirstName] [nvarchar](50) NULL,
+	[LastName] [nvarchar](50) NULL,
+	[Email] [nvarchar](50) NULL,
+	[PhoneNo] [nvarchar](50) NULL,
+	[Status] [bit] NULL,
+ CONSTRAINT [PK_Employees] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+INSERT [dbo].[Employees] ([Id], [FirstName], [LastName], [Email], [PhoneNo], [Status]) VALUES (N'1', N'Vitthal', N'Bedare', N'vittal14@gmail.com', N'9923880262', 1)
+GO
+INSERT [dbo].[Employees] ([Id], [FirstName], [LastName], [Email], [PhoneNo], [Status]) VALUES (N'2', N'Swarj', N'Bedare', N'swar12@gmail.com', N'9845345289', 0)
+GO
+INSERT [dbo].[Employees] ([Id], [FirstName], [LastName], [Email], [PhoneNo], [Status]) VALUES (N'7db979b9-ad5a-4b93-84d8-679abc9f8610', N'Manohar', N'Patil', N'djahsjd@djdhsdj.df', N'98765432', 1)
+GO
