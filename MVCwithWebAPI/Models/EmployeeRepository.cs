@@ -9,9 +9,10 @@ namespace MVCwithWebAPI.Models
 {
     public class EmployeeRepository : IEmployeeRepository
     {
-        private readonly SqlDbContext db = new SqlDbContext();
+        private readonly EHL_DemoEntities db = new EHL_DemoEntities();
         public async Task Add(Employee employee)
         {
+            
             employee.Id = Guid.NewGuid().ToString();
             db.Employees.Add(employee);
             try

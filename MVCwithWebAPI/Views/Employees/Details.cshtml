@@ -46,7 +46,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Status)
+            @Html.CheckBoxFor(model => model.Status??false,null)
         </dd>
 
     </dl>
